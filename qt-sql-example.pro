@@ -10,12 +10,21 @@ TEMPLATE = app
 
 SOURCES += src/main.cpp\
            src/mainwindow.cpp \
-           src/db_controller.cpp
+           src/db_controller.cpp \
+    src/base_window.cpp \
+    src/form.cpp \
+    src/user_ui.cpp
 
 HEADERS += src/mainwindow.h \
-           src/db_controller.h
+           src/db_controller.h \
+    src/base_window.h \
+    src/form.h \
+    src/user_ui.h
 
-FORMS   += src/mainwindow.ui
+FORMS   += src/mainwindow.ui \
+    src/base_window.ui \
+    src/form.ui \
+    src/user_ui.ui
 
 RESOURCES += res/icons.qrc
 

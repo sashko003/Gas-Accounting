@@ -1,6 +1,7 @@
 #include "db_controller.h"
 #include "mainwindow.h"
-
+#include "base_window.h"
+#include "user_ui.h"
 #include <QApplication>
 #include <QThread>
 
@@ -16,6 +17,10 @@ int main(int argc, char *argv[])
 
     MainWindow window(0, &db_controller, &db_thread);
     window.show();
+    BaseWindow base;
+    base.show();
+    UserUI userUi;
+    userUi.show();
     
     return app.exec();
 }
