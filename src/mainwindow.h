@@ -15,7 +15,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     
 public:
-    explicit MainWindow(QWidget* parent, DbController* dbc, QThread* dbt);
+    explicit MainWindow(QWidget* parent, DbController* dbc);
     ~MainWindow();
 
 public slots:
@@ -40,7 +40,6 @@ signals:
 private:
     Ui::MainWindow* ui;
     DbController*   db_controller;
-    QThread*        db_thread;
 
 protected:
     virtual void keyPressEvent(QKeyEvent*);

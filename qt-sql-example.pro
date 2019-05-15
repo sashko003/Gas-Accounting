@@ -10,12 +10,15 @@ TEMPLATE = app
 
 SOURCES += src/main.cpp\
            src/mainwindow.cpp \
-           src/db_controller.cpp
+           src/db_controller.cpp \
+    src/logindialog.cpp
 
 HEADERS += src/mainwindow.h \
-           src/db_controller.h
+           src/db_controller.h \
+    src/logindialog.h
 
-FORMS   += src/mainwindow.ui
+FORMS   += src/mainwindow.ui \
+    src/logindialog.ui
 
 RESOURCES += res/icons.qrc
 
