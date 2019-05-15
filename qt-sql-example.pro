@@ -10,10 +10,13 @@ TEMPLATE = app
 
 SOURCES += src/main.cpp\
            src/mainwindow.cpp \
-           src/db_controller.cpp
+           src/db_controller.cpp \
+    src/Controller/dbcontroller.cpp
 
 HEADERS += src/mainwindow.h \
-           src/db_controller.h
+           src/db_controller.h \
+    src/Controller/dbcontroller.h \
+    src/common.h
 
 FORMS   += src/mainwindow.ui
 
