@@ -6,14 +6,13 @@
 #include <QKeyEvent>
 #include <QSettings>
 
-MainWindow::MainWindow(QWidget* parent, DbController* dbc, QThread* dbt) :
+MainWindow::MainWindow(QWidget* parent, DbController* dbc) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
     db_controller = dbc;
-    db_thread = dbt;
 
     // check Qt SQL drivers
 
@@ -99,8 +98,6 @@ MainWindow::MainWindow(QWidget* parent, DbController* dbc, QThread* dbt) :
 
 MainWindow::~MainWindow()
 {
-    db_thread->exit();
-    db_thread->wait();
     delete ui;
 }
 
